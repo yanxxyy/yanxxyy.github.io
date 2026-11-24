@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="闫星阳的在线简历，求职方向：Agent 算法与研发工程师。" />
+    <meta name="theme-color" content="#f5f7fb" />
+    <title>闫星阳 · Agent 算法 / 研发工程师</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#main">跳转到正文</a>
+
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="#top" aria-label="闫星阳，返回顶部">
+          <span class="brand-mark">YX</span>
+          <span class="brand-name">闫星阳<span class="brand-dot">.</span></span>
+        </a>
+        <nav class="nav" aria-label="页面导航">
+          <a href="#experience">实习经历</a>
+          <a href="#projects">项目经历</a>
+          <a href="#research">科研经历</a>
+          <a href="#figures">论文图解</a>
+          <a href="#education">教育背景</a>
+          <a href="#skills">专业技能</a>
+        </nav>
+        <a class="print-button" href="./assets/resume.pdf" download="闫星阳_简历.pdf" type="application/pdf" aria-label="下载闫星阳的 PDF 简历">下载简历 <span aria-hidden="true">↓</span></a>
+      </div>
+    </header>
+
+    <main id="main" class="resume-main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-main">
+          <div class="hero-overline" aria-hidden="true"><span>AI ENGINEERING / PORTFOLIO</span><span>YX — 2027</span></div>
+          <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> 2027 届硕士 · 求职中</p>
+          <h1 id="hero-title">闫星阳<span class="title-period">.</span></h1>
+          <p class="hero-role">Agent 算法 / 研发工程师</p>
+          <p class="hero-summary">聚焦 Agent 工作流、模型后训练与数据系统，具备 AIGC 产品研发、湖仓数据治理及视觉研究经历。</p>
+          <div class="hero-tags" aria-label="方向关键词">
+            <span>Agent 工程</span><span>大模型应用</span><span>数据工程</span><span>多模态</span>
+          </div>
+        </div>
+        <aside class="contact-card" aria-label="个人信息与联系方式">
+          <div class="contact-card-top">
+            <span class="contact-label">CONTACT</span>
+            <span class="contact-symbol" aria-hidden="true">↗</span>
+          </div>
+          <dl>
+            <div><dt>电话</dt><dd><a href="tel:+8615723576994">157 2357 6994</a></dd></div>
+            <div><dt>邮箱</dt><dd><a href="mailto:1479452168@qq.com">1479452168@qq.com</a></dd></div>
+            <div><dt>学历</dt><dd>华北理工大学 · 人工智能硕士</dd></div>
+            <div><dt>概况</dt><dd>24 岁 · 一年工作经验</dd></div>
+          </dl>
+          <a class="contact-cta" href="mailto:1479452168@qq.com?subject=%E5%B7%A5%E4%BD%9C%E6%9C%BA%E4%BC%9A%E6%B2%9F%E9%80%9A">联系我 <span aria-hidden="true">↗</span></a>
+        </aside>
+      </section>
+
+      <section class="resume-section" id="experience" aria-labelledby="experience-title">
+        <div class="section-heading"><span class="section-index">01 / EXPERIENCE</span><h2 id="experience-title">实习经历</h2><p>从 Agent 决策到多模态生成结果的完整链路。</p></div>
+        <div class="section-body" tabindex="0" role="region" aria-label="实习经历详细内容">
+        <article class="feature-card">
+          <div class="entry-top">
+            <div><p class="entry-kicker">上海愉游网络科技有限公司 <span class="separator">/</span> AIGC 美术部</p><h3>AIGC 全栈实习生</h3></div>
+            <time class="date-pill" datetime="2026-09">2026.09 — 至今</time>
+          </div>
+          <div class="project-intro"><span class="project-mark" aria-hidden="true">L</span><div><h4>Lumi AI-Agent 创作工作台</h4><p>游戏素材生成 Agent 平台</p></div></div>
+          <p class="stack"><strong>技术栈</strong><span>LangChain · LangGraph · Python · TypeScript · MQ · Redis · Prisma · PostgreSQL · Docker</span></p>
+          <dl class="detail-list">
+            <div><dt>业务背景</dt><dd>参与商业 Lumi-AI 创作工作台研发，主要负责游戏素材生成 Agent 平台中的工作流编排引擎和素材生成服务链路。用户输入剧情创意后，系统完成剧本理解、角色设定、场景拆分、分镜规划及多模态媒体生成，并将资产归档、回填至创作画布。</dd></div>
+            <div><dt>编排与状态</dt><dd>参与设计 Agent 规划、用户直选模型和预设工作流三类执行路径，将创作请求拆解为带依赖关系的任务；封装模型参数映射、任务提交、异步查询及错误处理。建立运行与任务两级状态流转，持久化排队、执行、成功、失败和取消状态，支持刷新恢复与失败重试；通过模型能力、素材权限和参数校验，以及请求幂等与数据库事务，避免重复任务或扣费。</dd></div>
+            <div><dt>异步执行</dt><dd>结合消息队列、Redis 与 Worker 执行耗时生成任务，处理异步轮询、并发调度、超时及重试。</dd></div>
+            <div><dt>资产反馈</dt><dd>将生成结果关联至会话、任务和素材资产，通过 SSE 推送进度与结果，并结合接口查询完成断线后的状态同步。</dd></div>
+          </dl>
+        </article>
+        </div>
+      </section>
+
+      <section class="resume-section" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading"><span class="section-index">02 / PROJECTS</span><h2 id="projects-title">项目经历</h2><p>把数据治理、模型训练和 Agent 应用串成可评测的系统。</p></div>
+        <div class="section-body" tabindex="0" role="region" aria-label="项目经历详细内容">
+        <article class="feature-card project-card">
+          <div class="entry-top"><div><p class="entry-kicker">DATA + AI <span class="separator">/</span> 湖仓一体</p><h3>快递物流智能数据治理与客服归因分析平台</h3></div><time class="date-pill" datetime="2026-05">2026.05 — 至今</time></div>
+          <p class="stack"><strong>技术栈</strong><span>Flink · Spark · Hadoop · Python · Java · K8s · Docker · Qwen3-8B · vLLM · SFT + GRPO · Markdown 上下文工程</span></p>
+          <dl class="detail-list">
+            <div><dt>业务背景</dt><dd>针对多源运单与客服数据的离线实时割裂、运单口径不统一、异常归因依赖人工及 ETL 维护成本高等问题，搭建存算分离湖仓一体实验平台，支撑运单画像、异常归因和客服 Agent 的可信数据调用。</dd></div>
+            <div><dt>方案选型</dt><dd>采用 Hudi 承接运单 CDC 高频更新、Iceberg 存储离线追加数据；由 Flink 实时入湖、Spark 完成离线回补，引入 Doris 加速热数据 OLAP 查询。组件基于 K8s 容器化部署，隔离 CPU/GPU 资源。</dd></div>
+            <div><dt>具体实现</dt><dd>利用大模型辅助生成数据清洗 SQL 和数据血缘；以 Markdown 结构化存储业务 SOP 与数据约束，动态加载上下文。搭建 SFT + GRPO 后训练流程，在奖励函数中引入数据一致性校验；通过 vLLM 部署推理服务，结合 Docker 沙箱与 Computer Use 完成湖仓查询和运单后台的多跳推理。</dd></div>
+            <div><dt>效果评估</dt><dd>基于本地采样运单数据集完成全链路评测，ETL 规则由人工编写转向 LLM 辅助生成。后训练使多跳工具调用的证据 EM 从 24% 提升至 51%，证据与答案联合 EM 从 13% 提升至 29%。</dd></div>
+          </dl>
+          <div class="metric-row" aria-label="项目评测结果"><div><strong>24% <span>→</span> 51%</strong><small>证据 EM</small></div><div><strong>13% <span>→</span> 29%</strong><small>证据 + 答案联合 EM</small></div></div>
+        </article>
+        </div>
+      </section>
+
+      <section class="resume-section" id="research" aria-labelledby="research-title">
+        <div class="section-heading"><span class="section-index">03 / RESEARCH</span><h2 id="research-title">科研经历</h2><p>计算机视觉与低照度图像增强。</p></div>
+        <div class="section-body" tabindex="0" role="region" aria-label="科研经历与论文图解">
+        <article class="research-card" tabindex="0" aria-describedby="research-animation-hint">
+          <div class="research-topline"><span class="research-kicker">01 / PUBLISHED RESEARCH</span><time class="date-pill" datetime="2025-05">2025.05 — 2026.08</time></div>
+          <div class="research-main">
+            <div class="research-badges"><span class="research-badge research-badge--author">第一作者</span><span class="research-badge research-badge--published">已发表</span></div>
+            <h3>低照度图像增强与视觉表征方法研究</h3>
+            <p class="paper-title">Using KL-Divergence to Focus Frequency Information in Low-Light Image Enhancement</p>
+            <div class="research-venue"><strong>Pattern Recognition</strong><span>Elsevier 旗下期刊</span></div>
+            <div class="research-rank" aria-label="期刊信息"><span>SCI 一区 TOP</span><span>CCF B</span><span>IF 9.1</span></div>
+            <p class="research-summary">围绕低照度图像中的暗部细节、噪声和色彩恢复，结合频域分析与视觉特征约束设计增强方法，并通过跨场景对比展示结果。</p>
+            <div class="research-focus" aria-label="研究要点"><span>频域信息建模</span><span>视觉特征约束</span><span>低照度增强</span></div>
+          </div>
+          <figure class="research-source-cover"><img src="./assets/pattern-recognition-cover.png" alt="Pattern Recognition 期刊封面" width="205" height="273" loading="lazy" /><figcaption>期刊封面</figcaption></figure>
+          <div class="journal-cover" aria-label="Pattern Recognition 期刊及 Elsevier 出版社标识">
+            <span class="journal-cover-kicker">THE JOURNAL OF THE PATTERN RECOGNITION SOCIETY</span>
+            <strong class="journal-cover-title">Pattern<br />Recognition</strong>
+            <span class="journal-logo"><img src="./assets/elsevier-mark.svg" alt="Elsevier 出版社标识" width="602" height="662" loading="lazy" /></span>
+            <span class="journal-cover-footer">ELSEVIER <span aria-hidden="true">↗</span></span>
+          </div>
+          <span class="sr-only" id="research-animation-hint">将鼠标移入卡片，或聚焦后按回车键或空格键，可播放期刊标识动画。</span>
+        </article>
+        </div>
+      </section>
+
+      <section class="resume-section paper-section" id="figures" aria-labelledby="paper-figures-title">
+        <div class="section-heading"><span class="section-index">04 / FIGURES</span><h2 id="paper-figures-title">从方法设计到效果对比</h2><p>点击左右按钮切换 6 张图；点击当前图片可打开原图查看标注。</p></div>
+        <div class="section-body" tabindex="0" role="region" aria-label="论文图解详细内容">
+        <div class="paper-figures">
+          <div class="paper-carousel" aria-roledescription="轮播" aria-label="论文图解">
+            <button class="paper-nav paper-nav--prev" id="paper-prev" type="button" aria-label="查看上一张论文图" aria-controls="paper-gallery"><span aria-hidden="true">←</span></button>
+            <div class="paper-stage" id="paper-gallery" role="group" aria-label="当前论文图">
+            <figure class="paper-figure is-active">
+              <a class="paper-image-link" href="./assets/paper/comparison-scenes.png" target="_blank" rel="noopener" aria-label="打开跨场景增强效果对比原图"><img src="./assets/paper/comparison-scenes.png" alt="DICM、LIME、NPE 等场景中，低照度输入、其他方法与 LLFDisc 输出的并列对比" loading="lazy" decoding="async" /><span class="image-open">查看原图 ↗</span></a>
+              <figcaption><div class="figure-meta"><span class="paper-tag paper-tag--compare">效果对比</span><span class="figure-number">图 01 / 06</span></div><h4>跨场景增强效果</h4><p>对照低照度输入、基线方法与 LLFDisc 的输出，观察不同场景中的亮度、色彩和暗部细节。</p></figcaption>
+            </figure>
+            <figure class="paper-figure is-next">
+              <a class="paper-image-link" href="./assets/paper/comparison-details.png" target="_blank" rel="noopener" aria-label="打开局部细节对比原图"><img src="./assets/paper/comparison-details.png" alt="输入图像、SNR、RetinexFormer、LLFlow、Bread、KinD、LLFDisc 与 GT 的局部细节对比" loading="lazy" decoding="async" /><span class="image-open">查看原图 ↗</span></a>
+              <figcaption><div class="figure-meta"><span class="paper-tag paper-tag--compare">效果对比</span><span class="figure-number">图 02 / 06</span></div><h4>多方法局部细节对比</h4><p>通过放大框比较不同增强方法与真实图像（GT）在纹理、亮度和细节保留方面的表现。</p></figcaption>
+            </figure>
+            <figure class="paper-figure is-hidden">
+              <a class="paper-image-link" href="./assets/paper/vgg-kl-loss.png" target="_blank" rel="noopener" aria-label="打开 VGG-KL 损失示意原图"><img src="./assets/paper/vgg-kl-loss.png" alt="VGG19 提取通道与空间特征，再对预测和真实图像计算 KL 散度的流程图" loading="lazy" decoding="async" /><span class="image-open">查看原图 ↗</span></a>
+              <figcaption><div class="figure-meta"><span class="paper-tag paper-tag--method">特征约束</span><span class="figure-number">图 03 / 06</span></div><h4>VGG-KL 特征损失</h4><p>使用 VGG19 提取通道与空间特征，分别计算预测图像和真实图像的 KL 散度，形成特征约束。</p></figcaption>
+            </figure>
+            <figure class="paper-figure is-hidden">
+              <a class="paper-image-link" href="./assets/paper/llfdisc-architecture.png" target="_blank" rel="noopener" aria-label="打开 LLFDisc 网络结构原图"><img src="./assets/paper/llfdisc-architecture.png" alt="LLFDisc 主网络与 CAB、Enhanced LCA、IEL、DANCE、SE 等模块结构" loading="lazy" decoding="async" /><span class="image-open">查看原图 ↗</span></a>
+              <figcaption><div class="figure-meta"><span class="paper-tag paper-tag--architecture">网络结构</span><span class="figure-number">图 04 / 06</span></div><h4>LLFDisc 网络结构</h4><p>展示输入到增强输出的主干流程，以及交叉注意力、信息增强、暗区与噪声校正等模块。</p></figcaption>
+            </figure>
+            <figure class="paper-figure is-hidden">
+              <a class="paper-image-link" href="./assets/paper/phase-amplitude-swap.png" target="_blank" rel="noopener" aria-label="打开相位与幅度交换逻辑原图"><img src="./assets/paper/phase-amplitude-swap.png" alt="低光和正常光图像经过 FFT 分解为相位与幅度，交换幅度后通过逆变换重建" loading="lazy" decoding="async" /><span class="image-open">查看原图 ↗</span></a>
+              <figcaption><div class="figure-meta"><span class="paper-tag paper-tag--logic">频域逻辑</span><span class="figure-number">图 05 / 06</span></div><h4>相位与幅度交换实验</h4><p>将低光与正常光图像分解为相位、幅度分量，再交换幅度并逆变换，直观展示频域信息与亮度变化的关系。</p></figcaption>
+            </figure>
+            <figure class="paper-figure is-prev">
+              <a class="paper-image-link" href="./assets/paper/fftgd-loss.png" target="_blank" rel="noopener" aria-label="打开 FFTGD 频域分布约束原图"><img src="./assets/paper/fftgd-loss.png" alt="FFTGD 对频域相位和幅度建立高斯分布，并以 KL 散度比较预测图像和真实图像" loading="lazy" decoding="async" /><span class="image-open">查看原图 ↗</span></a>
+              <figcaption><div class="figure-meta"><span class="paper-tag paper-tag--method">频域约束</span><span class="figure-number">图 06 / 06</span></div><h4>FFTGD 分布约束</h4><p>对相位和幅度分量建立高斯分布，比较预测图像与真实图像的分布差异，并通过 KL 散度约束增强结果。</p></figcaption>
+            </figure>
+            </div>
+            <button class="paper-nav paper-nav--next" id="paper-next" type="button" aria-label="查看下一张论文图" aria-controls="paper-gallery"><span aria-hidden="true">→</span></button>
+          </div>
+          <div class="paper-carousel-footer"><span class="paper-scroll-status" id="paper-scroll-status" aria-live="polite">01 / 06</span><span>点击左右按钮切换图片</span></div>
+        </div>
+        </div>
+      </section>
+
+      <section class="resume-section" id="education" aria-labelledby="education-title">
+        <div class="section-heading"><span class="section-index">05 / EDUCATION</span><h2 id="education-title">教育背景</h2><p>人工智能方向的系统学习与研究。</p></div>
+        <div class="section-body" tabindex="0" role="region" aria-label="教育背景详细内容">
+        <div class="education-grid">
+          <article class="education-card education-card--ncst">
+            <div class="education-topline"><span class="degree-label">硕士 · 人工智能学院</span><time class="date-pill" datetime="2024-09">2024.09 — 2027.06</time></div>
+            <div class="education-profile"><span class="school-crest"><img src="./assets/ncst-crest.png" alt="华北理工大学校徽" width="72" height="72" loading="lazy" /></span><div><h3>华北理工大学</h3><p class="education-major">人工智能</p></div></div>
+            <div class="education-details"><div class="academic-metrics"><span>GPA <strong>3.4/5</strong></span><span>年级排名 <strong>前 5%</strong></span></div><p class="education-highlights"><strong>荣誉与竞赛</strong>国家奖学金 · 研究生奖学金 · 亚太杯数学建模大赛二等奖 · 中国移动时序预测三等奖</p></div>
+          </article>
+          <article class="education-card education-card--cfec">
+            <div class="education-topline"><span class="degree-label">本科 · 人工智能学院</span><time class="date-pill" datetime="2020-09">2020.09 — 2024.06</time></div>
+            <div class="education-profile"><span class="school-crest"><img src="./assets/cfec-crest.png" alt="重庆财经学院校徽" width="72" height="72" loading="lazy" /></span><div><h3>重庆财经学院</h3><p class="education-major">数据科学与大数据技术</p></div></div>
+            <div class="education-details"><div class="academic-metrics"><span>GPA <strong>3.3/5</strong></span><span>年级排名 <strong>前 10%</strong></span></div><p class="education-highlights"><strong>荣誉与竞赛</strong>国家励志奖学金 · 学业奖学金 · CET-6 · 全国大学生大数据挑战赛</p></div>
+          </article>
+        </div>
+        </div>
+      </section>
+
+      <section class="resume-section skills-section" id="skills" aria-labelledby="skills-title">
+        <div class="section-heading"><span class="section-index">06 / SKILLS</span><h2 id="skills-title">专业技能</h2><p>覆盖 Agent 应用、模型训练与数据服务化。</p></div>
+        <div class="section-body" tabindex="0" role="region" aria-label="专业技能详细内容">
+        <div class="skills-grid">
+          <article class="skill-card skill-card--agent" tabindex="0"><div class="skill-card-top"><span class="skill-number">01</span><div class="skill-logos"><span class="skill-logo skill-logo--dark"><img src="./assets/langgraph.svg" alt="LangGraph Logo" width="34" height="34" /></span></div></div><h3>Agent 架构与上下文工程</h3><p>熟悉开源 Agent 框架及常见架构，具备多 Agent 协作、工具调用与 MCP 集成实践；熟悉记忆管理、历史检索、上下文压缩、会话状态恢复，以及长任务重试与异常处理。</p></article>
+          <article class="skill-card skill-card--rag" tabindex="0"><div class="skill-card-top"><span class="skill-number">02</span><div class="skill-logos"><span class="skill-logo skill-logo--dark"><img src="./assets/langchain.svg" alt="LangChain Logo" width="34" height="34" /></span></div></div><h3>RAG 与知识检索</h3><p>熟悉文档提取、分块、Embedding、索引构建和检索增强流程；掌握 BM25 与 Dense 混合检索、RRF 融合、Cross-Encoder 重排、元数据过滤和引用溯源。</p></article>
+          <article class="skill-card skill-card--training" tabindex="0"><div class="skill-card-top"><span class="skill-number">03</span><div class="skill-logos"><span class="skill-logo skill-logo--qwen"><img src="./assets/qwen.svg" alt="Qwen Logo" width="34" height="34" /></span><span class="skill-logo skill-logo--deepseek"><img src="./assets/deepseek.svg" alt="DeepSeek Logo" width="34" height="34" /></span></div></div><h3>模型后训练与评估</h3><p>具备基于 Qwen-LoRA 的 SFT、DPO、RLHF、OPD 对比实验经验；熟悉训练数据构建、结构化输出、错误分析与评估集验证，并了解 RSI、Rubric 等方法。</p></article>
+          <article class="skill-card skill-card--llm" tabindex="0"><div class="skill-card-top"><span class="skill-number">04</span><div class="skill-logos"><span class="skill-logo skill-logo--huggingface"><img src="./assets/huggingface.svg" alt="Hugging Face Logo" width="34" height="34" /></span></div></div><h3>大模型基础</h3><p>理解 Transformer、Attention 和自回归生成原理，了解上下文长度、KV Cache 与推理开销的关系；理解其在视觉、语言和时序任务中的应用，了解扩散模型 ELBO 与 MoE 架构。</p></article>
+          <article class="skill-card skill-card--data" tabindex="0"><div class="skill-card-top"><span class="skill-number">05</span><div class="skill-logos"><span class="skill-logo skill-logo--hadoop"><img src="./assets/apachehadoop.svg" alt="Apache Hadoop 黄色小象 Logo" width="34" height="34" /></span></div></div><h3>大数据基础</h3><p>理解 Hadoop 生态、Spark SQL/DataFrame 与 Flink 流批计算；了解 Iceberg、Hudi、Paimon 等数据湖技术及 Doris、StarRocks 等 OLAP 引擎，理解存算分离与 ETL 调度。</p></article>
+          <article class="skill-card skill-card--backend" tabindex="0"><div class="skill-card-top"><span class="skill-number">06</span><div class="skill-logos"><span class="skill-logo skill-logo--redis"><img src="./assets/redis.svg" alt="Redis Logo" width="34" height="34" /></span></div></div><h3>后端开发与服务化</h3><p>熟悉 Python/FastAPI 接口开发与 Redis 缓存，熟悉 MongoDB、HBase 等 NoSQL 数据库。</p></article>
+        </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><div class="wrap footer-inner"><span>闫星阳 · Agent 算法 / 研发工程师</span><a href="mailto:1479452168@qq.com">联系我 <span aria-hidden="true">↗</span></a></div></footer>
+    <script src="./gallery.js" defer></script>
+    <script src="./research.js" defer></script>
+    <script src="./sections.js" defer></script>
+  </body>
+</html>
