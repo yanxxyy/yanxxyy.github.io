@@ -17,13 +17,13 @@ python -m http.server 8000
 ## 部署到 GitHub Pages
 
 1. 在 GitHub 创建公开仓库，名称为 `<你的 GitHub 用户名>.github.io`。
-2. 把本目录中的 `index.html`、`styles.css`、`gallery.js`、`research.js`、`education.js`、`sections.js` 和 `assets/` 上传到该仓库根目录，确保 `assets/resume.pdf` 也已上传。
+2. 把本目录中的 `index.html`、`styles.css`、`gallery.js`、`research.js`、`sections.js` 和 `assets/` 上传到该仓库根目录，确保 `assets/resume.pdf` 也已上传。
 3. 在仓库 `Settings → Pages → Build and deployment` 中选择 `Deploy from a branch`，分支选 `main`，目录选 `/ (root)`。
 4. 保存后访问 `https://<你的 GitHub 用户名>.github.io/`。
 
 更新简历文字时编辑 `index.html`；调整布局与颜色时编辑 `styles.css`。更新下载版本时，用新的 PDF 覆盖 `assets/resume.pdf`。提交并推送后，GitHub Pages 会重新发布。
 
-论文图解通过左右按钮循环切换，逻辑在 `gallery.js` 中；点击当前图片可以查看原图。教育背景在窄屏上横向排列，使用左右按钮切换，逻辑在 `education.js` 中。
+论文图解通过左右按钮循环切换，逻辑在 `gallery.js` 中；点击当前图片可以查看原图。教育背景按研究生、本科顺序展示，每段学历在卡片内横向排版。
 
 页面采用整屏区块，科研卡片与论文图解分别占一屏。桌面端滚轮切换部分；较长的经历可以聚焦内容后用方向键阅读全文，也可以按住 Alt 滚动滚轮查看区块内的后续内容。页面和区块内的滚动条均不显示。连续滚轮输入由 `sections.js` 合并为一条可反向的滚动动画。
 

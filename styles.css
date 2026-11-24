@@ -322,12 +322,14 @@ h1, h2, h3, h4, p { margin-top: 0; }
 #figures .paper-carousel-footer { color: #abc7e2; }
 #figures .paper-scroll-status { color: #8bdeff; }
 
-#education .education-carousel { position: relative; }
-#education .education-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch; }
-#education .education-card { background: radial-gradient(circle at 100% 0, rgba(61, 153, 225, .13), transparent 47%), linear-gradient(145deg, rgba(18, 44, 72, .97), rgba(9, 27, 49, .98)); border-color: rgba(160, 210, 255, .22); color: #f3f8ff; box-shadow: 0 22px 55px rgba(2, 10, 27, .25), inset 0 1px rgba(255, 255, 255, .04); }
+#education .education-grid { grid-template-columns: 1fr; gap: 14px; }
+#education .education-card { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); align-items: center; gap: 28px; min-height: 205px; padding: 24px 30px; background: radial-gradient(circle at 100% 0, rgba(61, 153, 225, .13), transparent 47%), linear-gradient(145deg, rgba(18, 44, 72, .97), rgba(9, 27, 49, .98)); border-color: rgba(160, 210, 255, .22); color: #f3f8ff; box-shadow: 0 22px 55px rgba(2, 10, 27, .25), inset 0 1px rgba(255, 255, 255, .04); }
 #education .education-card::before { background: linear-gradient(90deg, var(--school-color), #72d8ff 64%, transparent); }
 #education .education-card:hover { border-color: rgba(116, 216, 255, .55); box-shadow: 0 25px 55px rgba(2, 10, 27, .34), 0 0 32px rgba(64, 174, 244, .08); }
+#education .education-overview { min-width: 0; padding-right: 28px; border-right: 1px solid rgba(147, 201, 255, .18); }
 #education .education-topline { flex-wrap: wrap; }
+#education .education-profile { padding: 18px 0 0; }
+#education .education-details { min-width: 0; padding-top: 0; border-top: 0; }
 #education .degree-label { color: #9edfff; }
 #education .education-major { color: #b6cce2; }
 #education .school-crest { border-color: rgba(152, 208, 255, .38); box-shadow: 0 0 0 5px rgba(115, 191, 246, .08), 0 0 25px rgba(99, 190, 244, .11); }
@@ -336,7 +338,6 @@ h1, h2, h3, h4, p { margin-top: 0; }
 #education .education-highlights { color: #c0d2e3; }
 #education .education-highlights > strong { color: #8fdfff; }
 #education .honor-gold { display: inline-block; margin: 3px 3px 3px 0; padding: 2px 8px; border: 1px solid rgba(255, 214, 103, .46); border-radius: 6px; background: rgba(255, 195, 73, .17); color: #ffda74; font-weight: 850; text-shadow: 0 0 12px rgba(255, 203, 89, .4); box-shadow: inset 0 1px rgba(255, 243, 196, .13); }
-#education .education-controls { display: none; }
 
 #skills .skill-card:hover, #skills .skill-card:focus-visible { border-color: var(--skill-border); box-shadow: 0 24px 55px rgba(2, 10, 27, .38), 0 0 30px rgba(70, 163, 235, .09); }
 #skills .skill-card:focus-visible { box-shadow: 0 0 0 3px #74d8ff, 0 24px 55px rgba(2, 10, 27, .38); }
@@ -453,12 +454,18 @@ h1, h2, h3, h4, p { margin-top: 0; }
   .header-memes { gap: 0; }
 }
 @media screen and (max-width: 700px) {
-  #education .education-grid { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: calc(100% - 44px); gap: 12px; overflow-x: auto; overscroll-behavior-inline: contain; scroll-snap-type: x mandatory; scroll-behavior: smooth; padding: 2px 1px 9px; scrollbar-width: none; -ms-overflow-style: none; }
-  #education .education-grid::-webkit-scrollbar { display: none; }
-  #education .education-card { min-width: 0; padding: 22px 20px; scroll-snap-align: start; }
-  #education .education-controls { display: flex; justify-content: center; align-items: center; gap: 18px; margin-top: 16px; color: #a9dfff; font-size: 12px; font-weight: 800; font-variant-numeric: tabular-nums; }
-  #education .education-nav { display: grid; place-items: center; width: 40px; height: 40px; padding: 0; border: 1px solid rgba(162, 216, 255, .45); border-radius: 50%; background: rgba(116, 186, 241, .1); color: #e7f6ff; font-size: 20px; cursor: pointer; transition: background .2s ease, border-color .2s ease, transform .2s ease; }
-  #education .education-nav:hover { transform: scale(1.08); border-color: #9ae2ff; background: rgba(116, 216, 255, .28); }
+  #education .education-card { grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: 12px; min-height: 260px; padding: 18px 16px; }
+  #education .education-overview { padding-right: 12px; }
+  #education .education-topline { display: block; }
+  #education .education-card .date-pill { display: inline-block; margin-top: 8px; padding: 6px 7px; font-size: 10px; white-space: normal; }
+  #education .education-profile { display: block; padding-top: 14px; }
+  #education .school-crest { width: 60px; height: 60px; margin-bottom: 10px; }
+  #education .school-crest img { width: 52px; height: 52px; }
+  #education .education-profile h3 { font-size: 18px; line-height: 1.25; }
+  #education .education-major { font-size: 11px; line-height: 1.4; overflow-wrap: anywhere; }
+  #education .academic-metrics { gap: 5px; }
+  #education .academic-metrics span { padding: 5px 7px; font-size: 10px; }
+  #education .education-highlights { margin-top: 12px; font-size: 11px; line-height: 1.55; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; scroll-snap-type: none; } .section-reveal-ready .resume-section > * { opacity: 1; translate: none; transition: none; } .nav a, .print-button, .education-card, .image-open, .paper-figure, .paper-nav, .research-card, .journal-cover, .skill-card, .skill-logo, .hero-tags span, .contact-card, .contact-cta { transition: none; } .hero::after, .status-dot, .research-card:hover .journal-logo img, .research-card:focus-visible .journal-logo img, .research-card.is-activated .journal-logo img, .research-card:hover .journal-logo::before, .research-card:focus-visible .journal-logo::before, .research-card.is-activated .journal-logo::before, .skill-card:hover .skill-logo img, .skill-card:focus-visible .skill-logo img { animation: none; } .research-card:hover, .research-card:focus-visible, .research-card:hover .journal-cover, .research-card:focus-visible .journal-cover, .skill-card:hover, .skill-card:focus-visible, .skill-card:hover .skill-logo, .skill-card:focus-visible .skill-logo, .hero-tags span:hover, .contact-card:hover, .contact-cta:hover { transform: none; } }
 @media print {
@@ -526,7 +533,6 @@ h1, h2, h3, h4, p { margin-top: 0; }
   .paper-figures { display: none; }
   .paper-section { display: none !important; }
   .education-grid { grid-template-columns: 1fr 1fr; }
-  .education-controls { display: none; }
   .education-card:hover { transform: none; box-shadow: none; }
   .education-card::before { height: 2px; }
   .education-topline { flex-wrap: nowrap; }
