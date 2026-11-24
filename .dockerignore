@@ -1,0 +1,6 @@
+.git
+assets
+*.pdf
+__pycache__
+*.pyc
+agent/.env

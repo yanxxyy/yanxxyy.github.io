@@ -93,6 +93,8 @@
   window.addEventListener('wheel', event => {
     if (event.ctrlKey || event.metaKey || event.deltaY === 0) return
 
+    if (event.target instanceof Element && event.target.closest('.chat-panel')) return
+
     const inner = event.target instanceof Element ? event.target.closest('.section-body') : null
     if (event.altKey && inner) {
       event.preventDefault()

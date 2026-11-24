@@ -9,19 +9,25 @@
 直接用浏览器打开 `index.html`，或在本目录运行：
 
 ```powershell
-python -m http.server 8000
+python -m http.server 8765
 ```
 
-然后访问 `http://localhost:8000/`。页面右上角的“下载简历”按钮会直接下载 `assets/resume.pdf` 中的现成 PDF。
+然后访问 `http://localhost:8765/`。页面右上角的“下载简历”按钮会直接下载 `assets/resume.pdf` 中的现成 PDF。
 
 ## 部署到 GitHub Pages
 
 1. 在 GitHub 创建公开仓库，名称为 `<你的 GitHub 用户名>.github.io`。
-2. 把本目录中的 `index.html`、`styles.css`、`gallery.js`、`research.js`、`sections.js` 和 `assets/` 上传到该仓库根目录，确保 `assets/resume.pdf` 也已上传。
+2. 把本目录中的 `index.html`、`styles.css`、`gallery.js`、`research.js`、`sections.js`、`chat.js` 和 `assets/` 上传到该仓库根目录，确保 `assets/resume.pdf` 也已上传。
 3. 在仓库 `Settings → Pages → Build and deployment` 中选择 `Deploy from a branch`，分支选 `main`，目录选 `/ (root)`。
 4. 保存后访问 `https://<你的 GitHub 用户名>.github.io/`。
 
 更新简历文字时编辑 `index.html`；调整布局与颜色时编辑 `styles.css`。更新下载版本时，用新的 PDF 覆盖 `assets/resume.pdf`。提交并推送后，GitHub Pages 会重新发布。
+
+## 简历咨询 Agent
+
+页面右下角的咨询窗口使用独立的 Python 后端：后端从 `index.html` 提取简历段落，检索相关内容，再调用 DeepSeek。代码与部署说明在 [`agent/README.md`](agent/README.md)。API 密钥只放在后端环境变量 `DEEPSEEK_API_KEY` 中。
+
+本地预览页面会连接 `http://127.0.0.1:8000`。线上部署后，把后端的 HTTPS 地址填入 `index.html` 的 `resume-agent-api` 元信息；未配置地址时，线上咨询入口保持隐藏。GitHub Pages 仍只托管静态页面。
 
 论文图解通过左右按钮循环切换，逻辑在 `gallery.js` 中；点击当前图片可以查看原图。教育背景按研究生、本科顺序展示，每段学历在卡片内横向排版。
 

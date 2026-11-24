@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="闫星阳的在线简历，求职方向：Agent 算法与研发工程师。" />
     <meta name="theme-color" content="#f5f7fb" />
+    <meta name="resume-agent-api" content="" />
     <title>闫星阳 · Agent 算法 / 研发工程师</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
@@ -205,8 +206,18 @@
     </main>
 
     <footer class="site-footer"><div class="wrap footer-inner"><span>闫星阳 · Agent 算法 / 研发工程师</span><a href="mailto:1479452168@qq.com">联系我 <span aria-hidden="true">↗</span></a></div></footer>
+
+    <button class="chat-launcher" id="chat-launcher" type="button" aria-controls="chat-panel" aria-expanded="false"><span class="chat-launcher-icon" aria-hidden="true">✦</span><span>咨询简历</span></button>
+    <section class="chat-panel" id="chat-panel" role="dialog" aria-label="简历咨询 Agent" aria-modal="false" hidden>
+      <div class="chat-header"><div><span class="chat-overline">RESUME AGENT</span><h2>问我关于简历的问题</h2><p>DeepSeek · 简历知识检索</p></div><button class="chat-close" id="chat-close" type="button" aria-label="关闭简历咨询">×</button></div>
+      <div class="chat-messages" id="chat-messages" role="log" aria-live="polite" aria-relevant="additions"><p class="chat-message chat-message--assistant">你好！可以问我实习工作、项目成果、论文研究或专业技能。</p></div>
+      <div class="chat-suggestions" aria-label="示例问题"><button type="button" data-chat-question="Lumi 项目中负责什么？">Lumi 项目</button><button type="button" data-chat-question="论文研究的核心内容是什么？">论文研究</button><button type="button" data-chat-question="有哪些 Agent 和 RAG 相关技能？">Agent / RAG</button></div>
+      <form class="chat-form" id="chat-form"><label class="sr-only" for="chat-input">输入简历问题</label><textarea id="chat-input" rows="2" maxlength="500" placeholder="例如：你在 Lumi 项目中负责什么？" required></textarea><button id="chat-send" type="submit" aria-label="发送问题">→</button></form>
+      <p class="chat-note">回答依据本站公开简历，关键信息请以原文为准。</p>
+    </section>
     <script src="./gallery.js" defer></script>
     <script src="./research.js" defer></script>
     <script src="./sections.js" defer></script>
+    <script src="./chat.js" defer></script>
   </body>
 </html>
