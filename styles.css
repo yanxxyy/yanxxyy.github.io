@@ -31,14 +31,8 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outlin
 .brand-mark { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 11px; background: var(--ink); color: white; font-size: 13px; letter-spacing: .03em; }
 .brand-name { font-size: 18px; letter-spacing: .02em; }
 .brand-dot, .title-period { color: var(--accent); }
-.header-memes { position: relative; align-self: stretch; display: flex; flex: 1 1 auto; align-items: center; justify-content: space-evenly; gap: 8px; min-width: 0; overflow: hidden; pointer-events: none; user-select: none; }
-.header-memes::before { content: ""; position: absolute; top: 50%; right: 8%; left: 8%; border-top: 1px dashed rgba(79, 124, 182, .24); }
-.header-meme { position: relative; z-index: 1; display: inline-flex; align-items: center; gap: 3px; flex: 0 0 auto; }
-.header-meme img { display: block; width: 68px; height: 68px; object-fit: contain; filter: drop-shadow(0 5px 8px rgba(44, 65, 93, .15)); }
-.meme-caption { display: inline-block; padding: 6px 9px; border: 1px solid rgba(174, 207, 239, .65); border-radius: 999px; background: rgba(255, 255, 255, .92); color: #386093; font-size: 10px; font-weight: 800; letter-spacing: .025em; white-space: nowrap; box-shadow: 0 4px 12px rgba(47, 83, 122, .06); }
-.header-meme-frog .meme-caption { rotate: -4deg; }
-.header-meme-dragon .meme-caption { rotate: 4deg; color: #95622e; border-color: rgba(246, 211, 143, .7); }
-.meme-trail { position: relative; z-index: 1; color: #8eabd2; font-size: 13px; white-space: nowrap; text-shadow: 0 1px 5px #fff; }
+.header-memes { align-self: stretch; display: flex; flex: 1 1 auto; align-items: center; justify-content: space-evenly; gap: 8px; min-width: 0; overflow: hidden; pointer-events: none; user-select: none; }
+.header-meme { display: block; flex: 0 0 auto; width: 72px; height: 72px; object-fit: contain; filter: drop-shadow(0 5px 8px rgba(44, 65, 93, .15)); }
 .nav { display: flex; align-items: center; justify-content: center; gap: clamp(14px, 2vw, 28px); margin-left: 0; }
 .nav a { color: #45536a; font-size: 13px; font-weight: 650; white-space: nowrap; transition: color .2s ease; }
 .nav a:hover, .footer-inner a:hover { color: var(--accent); }
@@ -268,16 +262,13 @@ h1, h2, h3, h4, p { margin-top: 0; }
   .skills-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 1250px) {
-  .header-memes .meme-caption { display: none; }
-  .header-meme img { width: 58px; height: 58px; }
+  .header-meme { width: 58px; height: 58px; }
 }
 @media (max-width: 700px) {
   :root { --header-height: 66px; }
   .wrap { width: min(100% - 32px, 560px); }
   .header-inner { width: calc(100% - 24px); min-height: 65px; height: 65px; }
-  .header-meme img { width: 43px; height: 43px; }
-  .meme-trail { display: none; }
-  .header-memes::before { left: 20%; right: 20%; }
+  .header-meme { width: 43px; height: 43px; }
   .brand-mark { width: 34px; height: 34px; }
   .brand-name { font-size: 16px; }
   .print-button { padding: 9px 10px; font-size: 11px; }
@@ -346,7 +337,7 @@ h1, h2, h3, h4, p { margin-top: 0; }
   .skill-card-top { min-height: 65px; }
 }
 @media (max-width: 390px) {
-  .header-meme img { width: 35px; height: 35px; }
+  .header-meme { width: 35px; height: 35px; }
   .header-memes { gap: 0; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; scroll-snap-type: none; } .section-reveal-ready .resume-section > * { opacity: 1; translate: none; transition: none; } .nav a, .print-button, .education-card, .image-open, .paper-figure, .paper-nav, .research-card, .journal-cover, .skill-card, .skill-logo, .hero-tags span, .contact-card, .contact-cta { transition: none; } .hero::after, .status-dot, .research-card:hover .journal-logo img, .research-card:focus-visible .journal-logo img, .research-card.is-activated .journal-logo img, .research-card:hover .journal-logo::before, .research-card:focus-visible .journal-logo::before, .research-card.is-activated .journal-logo::before, .skill-card:hover .skill-logo img, .skill-card:focus-visible .skill-logo img { animation: none; } .research-card:hover, .research-card:focus-visible, .research-card:hover .journal-cover, .research-card:focus-visible .journal-cover, .skill-card:hover, .skill-card:focus-visible, .skill-card:hover .skill-logo, .skill-card:focus-visible .skill-logo, .hero-tags span:hover, .contact-card:hover, .contact-cta:hover { transform: none; } }
