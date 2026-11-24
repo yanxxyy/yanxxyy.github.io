@@ -21,7 +21,7 @@
           <img class="header-meme" src="./assets/milk-frog.png" alt="" width="72" height="72" decoding="async" />
           <img class="header-meme" src="./assets/milk-dragon-wink.png" alt="" width="72" height="72" decoding="async" />
           <img class="header-meme" src="./assets/milk-frog-orange.png" alt="" width="72" height="72" decoding="async" />
-          <img class="header-meme" src="./assets/milk-dragon.png" alt="" width="72" height="72" decoding="async" />
+          <img class="header-meme" src="./assets/milk-dragon-lounge.png" alt="" width="72" height="72" decoding="async" />
           <img class="header-meme" src="./assets/milk-frog-heart.png" alt="" width="72" height="72" decoding="async" />
           <img class="header-meme" src="./assets/milk-dragon-cheer.png" alt="" width="72" height="72" decoding="async" />
           <img class="header-meme" src="./assets/milk-frog-boba.png" alt="" width="72" height="72" decoding="async" />
@@ -170,17 +170,20 @@
       <section class="resume-section" id="education" aria-labelledby="education-title">
         <div class="section-heading"><span class="section-index">05 / EDUCATION</span><h2 id="education-title">教育背景</h2><p>人工智能方向的系统学习与研究。</p></div>
         <div class="section-body" tabindex="0" role="region" aria-label="教育背景详细内容">
-        <div class="education-grid">
+        <div class="education-carousel">
+        <div class="education-grid" id="education-gallery" role="group" aria-label="学历经历横向展示" tabindex="0">
           <article class="education-card education-card--ncst">
             <div class="education-topline"><span class="degree-label">硕士 · 人工智能学院</span><time class="date-pill" datetime="2024-09">2024.09 — 2027.06</time></div>
             <div class="education-profile"><span class="school-crest"><img src="./assets/ncst-crest.png" alt="华北理工大学校徽" width="72" height="72" loading="lazy" /></span><div><h3>华北理工大学</h3><p class="education-major">人工智能</p></div></div>
-            <div class="education-details"><div class="academic-metrics"><span>GPA <strong>3.4/5</strong></span><span>年级排名 <strong>前 5%</strong></span></div><p class="education-highlights"><strong>荣誉与竞赛</strong>国家奖学金 · 研究生奖学金 · 亚太杯数学建模大赛二等奖 · 中国移动时序预测三等奖</p></div>
+            <div class="education-details"><div class="academic-metrics"><span>GPA <strong>3.4/5</strong></span><span>年级排名 <strong>前 5%</strong></span></div><p class="education-highlights"><strong>荣誉与竞赛</strong><span class="honor-gold">国家奖学金</span> · 研究生奖学金 · 亚太杯数学建模大赛二等奖 · 中国移动时序预测三等奖</p></div>
           </article>
           <article class="education-card education-card--cfec">
             <div class="education-topline"><span class="degree-label">本科 · 人工智能学院</span><time class="date-pill" datetime="2020-09">2020.09 — 2024.06</time></div>
             <div class="education-profile"><span class="school-crest"><img src="./assets/cfec-crest.png" alt="重庆财经学院校徽" width="72" height="72" loading="lazy" /></span><div><h3>重庆财经学院</h3><p class="education-major">数据科学与大数据技术</p></div></div>
             <div class="education-details"><div class="academic-metrics"><span>GPA <strong>3.3/5</strong></span><span>年级排名 <strong>前 10%</strong></span></div><p class="education-highlights"><strong>荣誉与竞赛</strong>国家励志奖学金 · 学业奖学金 · CET-6 · 全国大学生大数据挑战赛</p></div>
           </article>
+        </div>
+        <div class="education-controls" aria-label="学历切换"><button class="education-nav" id="education-prev" type="button" aria-label="查看上一段学历" aria-controls="education-gallery">←</button><span id="education-status" aria-live="polite">01 / 02</span><button class="education-nav" id="education-next" type="button" aria-label="查看下一段学历" aria-controls="education-gallery">→</button></div>
         </div>
         </div>
       </section>
@@ -203,6 +206,7 @@
     <footer class="site-footer"><div class="wrap footer-inner"><span>闫星阳 · Agent 算法 / 研发工程师</span><a href="mailto:1479452168@qq.com">联系我 <span aria-hidden="true">↗</span></a></div></footer>
     <script src="./gallery.js" defer></script>
     <script src="./research.js" defer></script>
+    <script src="./education.js" defer></script>
     <script src="./sections.js" defer></script>
   </body>
 </html>
