@@ -34,7 +34,7 @@ python -m http.server 8000
 
 专业技能卡片使用保存在 `assets/` 的品牌 SVG，图形来自 [Simple Icons](https://simpleicons.org/)：Agent 为 LangGraph、RAG 为 LangChain、后训练为 Qwen 和 DeepSeek、大模型基础为 Hugging Face、大数据基础为 Apache Hadoop、后端开发为 Redis。Hadoop 图标使用黄色配色。卡片悬停和键盘聚焦时会触发 Logo 动画，并遵循系统“减少动画”设置。
 
-顶部导航栏的奶蛙、奶龙表情分别来自[求表情网](https://www.qiubiaoqing.com/img_detail/894691767562011253.html)与[花瓣网](https://huaban.com/pins/5633558126/)，仅作静态装饰；网页使用裁切、去背景后的本地图片。
+顶部导航栏使用 7 张静态表情包，奶蛙图片来自[求表情网](https://www.qiubiaoqing.com/album/user_album/894694275835495022.html)，奶龙图片来自[花瓣网](https://huaban.com/pins/5633558126/)及其相关图集；网页使用裁切、去背景后的本地图片。
 
 ## 发布前核对
 

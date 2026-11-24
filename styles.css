@@ -31,8 +31,15 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outlin
 .brand-mark { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 11px; background: var(--ink); color: white; font-size: 13px; letter-spacing: .03em; }
 .brand-name { font-size: 18px; letter-spacing: .02em; }
 .brand-dot, .title-period { color: var(--accent); }
-.header-memes { align-self: stretch; display: flex; flex: 1 1 auto; align-items: center; justify-content: space-evenly; gap: 8px; min-width: 0; overflow: hidden; pointer-events: none; user-select: none; }
-.header-meme { display: block; flex: 0 0 auto; width: 72px; height: 72px; object-fit: contain; filter: drop-shadow(0 5px 8px rgba(44, 65, 93, .15)); }
+.header-memes { align-self: stretch; display: flex; flex: 1 1 auto; align-items: center; justify-content: space-evenly; gap: 5px; min-width: 0; overflow: hidden; pointer-events: none; user-select: none; }
+.header-meme { display: block; flex: 0 0 auto; width: 62px; height: 62px; object-fit: contain; filter: drop-shadow(0 5px 8px rgba(44, 65, 93, .15)); }
+.header-meme:nth-child(1) { width: 67px; height: 67px; transform: translateY(3px) rotate(-7deg); }
+.header-meme:nth-child(2) { width: 57px; height: 57px; transform: translateY(-4px) rotate(6deg); }
+.header-meme:nth-child(3) { width: 63px; height: 63px; transform: translateY(4px) rotate(-4deg); }
+.header-meme:nth-child(4) { width: 68px; height: 68px; transform: translateY(-2px) rotate(5deg); }
+.header-meme:nth-child(5) { width: 59px; height: 59px; transform: translateY(4px) rotate(7deg); }
+.header-meme:nth-child(6) { width: 65px; height: 65px; transform: translateY(-3px) rotate(-5deg); }
+.header-meme:nth-child(7) { width: 58px; height: 58px; transform: translateY(4px) rotate(5deg); }
 .nav { display: flex; align-items: center; justify-content: center; gap: clamp(14px, 2vw, 28px); margin-left: 0; }
 .nav a { color: #45536a; font-size: 13px; font-weight: 650; white-space: nowrap; transition: color .2s ease; }
 .nav a:hover, .footer-inner a:hover { color: var(--accent); }
@@ -261,14 +268,20 @@ h1, h2, h3, h4, p { margin-top: 0; }
   .paper-figures { --paper-card-width: min(720px, calc(100% - 130px)); }
   .skills-grid { grid-template-columns: repeat(2, 1fr); }
 }
-@media (max-width: 1250px) {
-  .header-meme { width: 58px; height: 58px; }
+@media (max-width: 1450px) {
+  .header-memes .header-meme { width: 52px; height: 52px; }
+}
+@media (min-width: 981px) and (max-width: 1150px) {
+  .header-meme:nth-child(2), .header-meme:nth-child(6) { display: none; }
+}
+@media (max-width: 980px) {
+  .header-memes .header-meme { width: 54px; height: 54px; }
 }
 @media (max-width: 700px) {
   :root { --header-height: 66px; }
   .wrap { width: min(100% - 32px, 560px); }
   .header-inner { width: calc(100% - 24px); min-height: 65px; height: 65px; }
-  .header-meme { width: 43px; height: 43px; }
+  .header-memes .header-meme { width: 43px; height: 43px; }
   .brand-mark { width: 34px; height: 34px; }
   .brand-name { font-size: 16px; }
   .print-button { padding: 9px 10px; font-size: 11px; }
@@ -336,8 +349,12 @@ h1, h2, h3, h4, p { margin-top: 0; }
   .skill-card { min-height: auto; padding: 22px; }
   .skill-card-top { min-height: 65px; }
 }
+@media (max-width: 600px) {
+  .header-meme:nth-child(2), .header-meme:nth-child(4), .header-meme:nth-child(6) { display: none; }
+}
 @media (max-width: 390px) {
-  .header-meme { width: 35px; height: 35px; }
+  .header-meme:nth-child(3), .header-meme:nth-child(5) { display: none; }
+  .header-memes .header-meme { width: 35px; height: 35px; }
   .header-memes { gap: 0; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; scroll-snap-type: none; } .section-reveal-ready .resume-section > * { opacity: 1; translate: none; transition: none; } .nav a, .print-button, .education-card, .image-open, .paper-figure, .paper-nav, .research-card, .journal-cover, .skill-card, .skill-logo, .hero-tags span, .contact-card, .contact-cta { transition: none; } .hero::after, .status-dot, .research-card:hover .journal-logo img, .research-card:focus-visible .journal-logo img, .research-card.is-activated .journal-logo img, .research-card:hover .journal-logo::before, .research-card:focus-visible .journal-logo::before, .research-card.is-activated .journal-logo::before, .skill-card:hover .skill-logo img, .skill-card:focus-visible .skill-logo img { animation: none; } .research-card:hover, .research-card:focus-visible, .research-card:hover .journal-cover, .research-card:focus-visible .journal-cover, .skill-card:hover, .skill-card:focus-visible, .skill-card:hover .skill-logo, .skill-card:focus-visible .skill-logo, .hero-tags span:hover, .contact-card:hover, .contact-cta:hover { transform: none; } }
